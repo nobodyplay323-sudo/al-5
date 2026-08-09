@@ -1,0 +1,123 @@
+{
+  "theme": "Jucăuș: Kinetic Neo-Brutalist Pop",
+  "description": "An Awwwards Site-of-the-Day level playful editorial blog. Mixes high-end editorial layouts with Neo-Brutalist bold borders, vibrant color blocking, and smooth momentum scrolling.",
+  "typography": {
+    "headings": {
+      "font": "Clash Display",
+      "import_url": "@import url('https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700&display=swap');",
+      "rules": "Use font-semibold to font-bold. Always apply tight tracking (tracking-tighter) and tight leading (leading-none). Used for Hero, Article Titles."
+    },
+    "body": {
+      "font": "Satoshi",
+      "import_url": "@import url('https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap');",
+      "rules": "Use for paragraphs, metadata, and buttons. leading-relaxed."
+    },
+    "accents": {
+      "font": "Cabinet Grotesk",
+      "import_url": "@import url('https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@800,900&display=swap');",
+      "rules": "Use exclusively for massive manifesto numbers (01, 02) and marquee text."
+    }
+  },
+  "colors": {
+    "backgrounds": {
+      "primary": "#F4F1EA",
+      "secondary": "#FFFFFF",
+      "dark_inverted": "#111111"
+    },
+    "text": {
+      "primary": "#1A1A1A",
+      "muted": "#555555",
+      "inverted": "#F4F1EA"
+    },
+    "accents": {
+      "brand_blue": "#0047FF",
+      "brand_orange": "#FF5C00",
+      "brand_yellow": "#FFD600",
+      "brand_pink": "#FF66D8"
+    },
+    "borders": {
+      "default": "#1A1A1A"
+    }
+  },
+  "visual_enhancers": {
+    "borders": "Use hard, structural borders: border-2 border-[#1A1A1A] for cards, buttons, and section dividers.",
+    "shadows": "Use sharp, unblurred offset shadows for cards and buttons: shadow-[8px_8px_0px_0px_#1A1A1A]. On hover, translate the element and reduce the shadow to 4px.",
+    "shapes": "Mix strict rectangles with fully rounded pills (rounded-full) for tags, badges, and primary buttons.",
+    "textures": "Include a subtle SVG noise overlay fixed to the viewport with pointer-events-none opacity-[0.03] to opacity-[0.05] to remove the digital flatness."
+  },
+  "grids_layouts": {
+    "spacing": "Extremely generous. Sections should have py-24 or py-32. Container padding px-6 md:px-12.",
+    "articles_grid": "Mode A: Tetris Grid. md:grid-cols-12 gap-8. First featured article col-span-12 md:col-span-8, secondary col-span-12 md:col-span-4. Row spans should vary to create an asymmetric, masonry-like feel without actually using masonry."
+  },
+  "component_guidelines": {
+    "hero": "Kinetic Hero: Full viewport height (min-h-[90vh]). Massive text 'Colorat & Jucăuș'. Use framer-motion for line-by-line masked reveal (overflow-hidden wrapper around text that translates Y from 100% to 0). Include floating editorial images with parallax effect driven by scroll.",
+    "article_cards": "Editorial photography clipped inside containers with border-2 border-[#1A1A1A] and sharp offset shadows. The image inside scales up on hover via CSS transform (scale-105). Tags should be pill-shaped with vibrant background colors.",
+    "manifesto_chapters": "Numbered sections stacked vertically. Use massive typography for numbers ('01', '02') using Cabinet Grotesk text-[15vw] to text-[20vw] in brand_blue, brand_pink, or brand_yellow. Text content should overlap the numbers slightly.",
+    "editorial_marquee": "Use react-fast-marquee. Very slow (speed=20). Font: Cabinet Grotesk, massive size, alternating between filled text and text-stroke (text-transparent webkit-text-stroke).",
+    "navigation": "Crystal Glassmorphism over the solid background (backdrop-blur-xl bg-[#F4F1EA]/90 border-b-2 border-[#1A1A1A]), or a floating pill navigation fixed at the top.",
+    "newsletter": "Neo-brutalist form. Thick borders around the input field, sharp offset shadow for the submit button, vibrant brand_yellow background for the section.",
+    "single_article_view": "Clean, highly legible reading mode. Narrow max-width container (max-w-3xl) for text, huge full-bleed images, drop caps for the first letter of the article."
+  },
+  "motion": {
+    "scrolling": "MUST use @studio-freight/react-lenis for smooth momentum scrolling. This is critical for the premium editorial feel.",
+    "scroll_reveals": "Use framer-motion for whileInView effects. Elements should slide up slightly (y: 40 to 0) with a spring transition.",
+    "hover_effects": "Cards and Buttons: translate-x-[2px] translate-y-[2px] and change shadow to [4px_4px_0px_0px_#1A1A1A]. Image scales 105% inside its container."
+  },
+  "media": {
+    "image_urls": [
+      {
+        "url": "https://images.unsplash.com/photo-1686356513907-24c45338357f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjh8MHwxfHNlYXJjaHw0fHxjb2xvcmZ1bCUyMHN1cnJlYWwlMjBhcnQlMjBkZXNpZ258ZW58MHx8fHwxNzg2MzAwMzQ4fDA&ixlib=rb-4.1.0&q=85",
+        "category": "Hero Floating Image / Surreal Highlight",
+        "description": "Red and blue abstract object on pink background. Perfect for floating parallax in the hero."
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1617690032703-f991ed0e0ee6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NDh8MHwxfHNlYXJjaHwxfHx2aWJyYW50JTIwZmFzaGlvbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc4NjMwMDM1M3ww&ixlib=rb-4.1.0&q=85",
+        "category": "Featured Article Cover",
+        "description": "Woman in pink and green dress with sunglasses."
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1786052851271-66128a7af0b8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NDh8MHwxfHNlYXJjaHw0fHx2aWJyYW50JTIwZmFzaGlvbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc4NjMwMDM1M3ww&ixlib=rb-4.1.0&q=85",
+        "category": "Editorial Portrait / Secondary Article",
+        "description": "Woman in red fabric in a park."
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1594548044919-75fd146b8c60?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjh8MHwxfHNlYXJjaHwzfHxjb2xvcmZ1bCUyMG1pbmltYWwlMjBhcmNoaXRlY3R1cmV8ZW58MHx8fHwxNzg2MzAwMzYwfDA&ixlib=rb-4.1.0&q=85",
+        "category": "Architecture Article Cover",
+        "description": "Blue and white graphic architecture."
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1669840937066-a47011996ad6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjh8MHwxfHNlYXJjaHwyfHxjb2xvcmZ1bCUyMG1pbmltYWwlMjBhcmNoaXRlY3R1cmV8ZW58MHx8fHwxNzg2MzAwMzYwfDA&ixlib=rb-4.1.0&q=85",
+        "category": "Story Card Cover",
+        "description": "Person sitting in front of colorful windowed building."
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Install required libraries: `framer-motion`, `@studio-freight/react-lenis`, `react-fast-marquee`, `@phosphor-icons/react`.",
+    "Do NOT use generic typography (Inter, Roboto). Use the provided Fontshare links in index.css.",
+    "Apply `data-testid` to all interactive elements (buttons, links, form inputs, article cards).",
+    "Build the hero with a min-height and implement a masked line-by-line text reveal using framer-motion.",
+    "Do NOT use pure black or white for major structural elements. Use the defined #F4F1EA background and #1A1A1A text.",
+    "Implement the 'offset shadow' look for buttons and cards using Tailwind arbitrary values, e.g., shadow-[8px_8px_0px_0px_#1A1A1A].",
+    "Ensure the navigation header is either completely solid with a bottom border or crystal glassmorphism (backdrop-blur-xl bg-[#F4F1EA]/80 border-b-2 border-[#1A1A1A]). DO NOT make it transparent.",
+    "Keep all files as .js/.jsx, do not use TypeScript.",
+    "Create a cohesive single-page-like experience or app routing that transitions between the Hero, Articles Grid, Manifesto Chapters, and Newsletter.",
+    "Use framer-motion's useScroll and useTransform hooks to create parallax elements in the hero and manifesto sections."
+  ],
+  "universal_guidelines_for_main_agent": [
+    "You tend to converge toward generic, 'on distribution' outputs. Avoid this: make creative, distinctive frontends that surprise and delight.",
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients.",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur) where appropriate.",
+    "You MUST NOT apply universal transition. Eg: transition: all. Always add transitions for specific interactive elements like button, input excluding transforms.",
+    "You MUST NOT center align the app container, ie do not add .App { text-align: center; } in the css file.",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations & color relevant to the app style.",
+    "NEVER: use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯 etc for icons.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Subtle grain textures, noise overlays, custom cursors, selection states, and loading animations: separates good from extraordinary.",
+    "All interactive and key informational elements MUST include a data-testid attribute.",
+    "Use sonner for toasts. Sonner component are located in /app/src/components/ui/sonner.tsx."
+  ]
+}
